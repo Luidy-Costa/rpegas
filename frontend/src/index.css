@@ -1,51 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* 1. Mapeamento de Tokens do RPEGAS no Tailwind v4 */
+/*Ensinando o tailwind a usar as nossas cores*/
 @theme{
-  --color-primary: var(--bg-primary);
-  --color-surface: var(--bg-surface);
-  --color-border: var(--border-default);
-  --color-title: var(--text-title);
-  --color-body: var(--text-body);
-  --color-brand: var(--brand-accent);
-  
-  --font-sans: 'Inter', sans-serif;
+  /*Paleta padrão (modo claro) */
+  --color-primary:#E5E7EB;
+  --color-surface:#F3F4F6;
+  --color-border-default:#D1D5DB;
+  --color-title:#111827;
+  --color-body:#6B7280;
+  --color-brand:#9770F5;
+
+
+  /*Paleta especial*/
+  --color-success:#16a34a;
+  --color-danger:#bf1b1b;
+
 }
 
-/* 2. Nossas Variáveis de Modo Claro e Escuro */
-@layer base {
-  /* MODO CLARO (Default) */
-  :root {
-    --bg-primary: #E5E7EB;
-    --bg-surface: #F3F4F6;
-    --border-default: #D1D5DB;
-    --text-title: #111827;
-    --text-body: #6B7280;
-    --brand-accent: #9770F5;
+@layer components {
+  /*Tipografia*/
+
+  .text-titulo{
+    font-size:24px;
+    font-weight: bold;
+  }
+  
+  .text-subtitulo{
+    font-size:18px;
+    font-weight:600;
   }
 
-  /* MODO ESCURO */
-  .dark {
-    --bg-primary: #1F2123;
-    --bg-surface: #26292B;
-    --border-default: #374151;
-    --text-title: #FFFFFF;
-    --text-body: #9CA3AF;
-    --brand-accent: #A584FD;
+  .text-corpo{
+    font-size:16px;
+    font-weight: normal;
   }
 
-  /* 3. Estilos Globais Base */
-  body {
-    background-color: var(--bg-primary);
-    color: var(--text-body);
-    font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
-    transition: background-color 0.2s, color 0.2s;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--text-title);
-    font-weight: 600;
+  .text-detalhes{
+    font-size:14px;
+    font-weight:500;
   }
 }
